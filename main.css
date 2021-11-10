@@ -6,6 +6,7 @@ body {
 }
 body * {
     box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
 }
 .wrapper {
     height: 947px;
