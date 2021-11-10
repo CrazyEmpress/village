@@ -13,6 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
         let modalStuffTitle = document.querySelector('.stuff-title');
         let arrowRec = document.querySelector('.modal .arrow');
         let arrowStuff = document.querySelector('.modal-stuff .arrow');
+
+        let close = () => {
+            let objects = [bg, modal,modalStuff,dialog];
+            objects.map(item => {
+                item.classList.remove('visible');
+                setTimeout(() => {
+                    item.style.display = 'none';
+                }, 150);
+            });
+        }
         // Статус дома
         switch (status) {
             case 'building':
@@ -59,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         rectangle.onclick = () => {
             if (rectangle.classList.contains('gg')) return;
             let coords = rectangle.getBoundingClientRect();
+            let coordsNumber = number.getBoundingClientRect();
             document.querySelector('.upper .title').textContent ='Участок ' + houseNumber;
             if (status === 'building') {
                 houseStatus.textContent = 'Строится';
@@ -76,34 +87,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (window.innerWidth > 460) {
                 if (coords.y < 380) {
-                    modal.style.top = coords.y + (modal.clientHeight / 3.5) + 'px';
+                    modal.style.top = coordsNumber.y + (modal.clientHeight / 4) + 'px';
                     arrowRec.style.top = '-20px';
                     arrowRec.style.left = modal.clientWidth/2 - 15 + 'px';
                     arrowRec.style.transform = 'rotate(180deg)';
                 } else {
-                    modal.style.top = coords.y-(modal.clientHeight/1.1) + 'px';
+                    modal.style.top = coordsNumber.y-(modal.clientHeight/0.9) + 'px';
                     arrowRec.style.top = modal.clientHeight + 'px';
                     arrowRec.style.left = modal.clientWidth/2 - 15 + 'px';
                     arrowRec.style.transform = 'rotate(0deg)';
                 }
             } else {
                 if (coords.y < 385) {
-                    modal.style.top = coords.y + (modal.clientHeight / 3) + 'px';
+                    modal.style.top = coordsNumber.y + (modal.clientHeight / 3) + 'px';
                     arrowRec.style.top = '-20px';
                     arrowRec.style.left = modal.clientWidth/2 - 15 + 'px';
                     arrowRec.style.transform = 'rotate(180deg)';
                 }
                 else {
-                    modal.style.top = coords.y - (modal.clientHeight/1.1) + 'px';
+                    modal.style.top = coordsNumber.y - (modal.clientHeight/1.1) + 'px';
                     arrowRec.style.top = modal.clientHeight + 'px';
                     arrowRec.style.left = modal.clientWidth/2 - 15 + 'px';
                     arrowRec.style.transform = 'rotate(0deg)';
                 }
             }
             if (coords.x < 350) {
-                modal.style.left = coords.x/2 + 'px';
+                modal.style.left = coordsNumber.x/2 + 'px';
             } else {
-                modal.style.left = coords.x-(modal.clientWidth/2.4) + 'px';
+                modal.style.left = coordsNumber.x - (modal.clientWidth/2) + coordsNumber.width/2  + 'px';
             }
             bg.style.display = 'block';
             setTimeout(() => {
@@ -209,14 +220,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         // Закрытие модального окна
         bg.onclick = () => {
-            let objects = [bg, modal,modalStuff,dialog];
-            objects.map(item => {
-                item.classList.remove('visible');
-                setTimeout(() => {
-                    item.style.display = 'none';
-                }, 150);
-            });
-            // setTimeout(() => arrowStuff.style.display = 'block', 150);
+            close();
+        }
+        document.querySelector('.close').onclick = () => {
+            close();
         }
         let buttons = document.querySelectorAll('.btn');
         for (let button of buttons) {
