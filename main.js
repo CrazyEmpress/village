@@ -87,25 +87,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (window.innerWidth > 460) {
                 if (coords.y < 380) {
-                    modal.style.top = coordsNumber.y + (modal.clientHeight / 4) + 'px';
+                    modal.style.top = coordsNumber.y + (modal.clientHeight / 3.5) + 'px';
                     arrowRec.style.top = '-20px';
                     arrowRec.style.left = modal.clientWidth/2 - 15 + 'px';
                     arrowRec.style.transform = 'rotate(180deg)';
                 } else {
-                    modal.style.top = coordsNumber.y-(modal.clientHeight/0.9) + 'px';
+                    modal.style.top = coordsNumber.y-(modal.clientHeight/1.1) + 'px';
                     arrowRec.style.top = modal.clientHeight + 'px';
                     arrowRec.style.left = modal.clientWidth/2 - 15 + 'px';
                     arrowRec.style.transform = 'rotate(0deg)';
                 }
             } else {
                 if (coords.y < 385) {
-                    modal.style.top = coordsNumber.y + (modal.clientHeight / 3) + 'px';
+                    modal.style.top = coords.y + (modal.clientHeight / 3) + 'px';
                     arrowRec.style.top = '-20px';
                     arrowRec.style.left = modal.clientWidth/2 - 15 + 'px';
                     arrowRec.style.transform = 'rotate(180deg)';
                 }
                 else {
-                    modal.style.top = coordsNumber.y - (modal.clientHeight/1.1) + 'px';
+                    modal.style.top = coords.y - (modal.clientHeight/1.1) + 'px';
                     arrowRec.style.top = modal.clientHeight + 'px';
                     arrowRec.style.left = modal.clientWidth/2 - 15 + 'px';
                     arrowRec.style.transform = 'rotate(0deg)';

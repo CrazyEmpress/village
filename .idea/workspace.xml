@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e0cc05-04e3-462c-ad56-cd7216a117d1" name="Default Changelist" comment="Убрал (надеюсь) подёргивания">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+    <list default="true" id="98e0cc05-04e3-462c-ad56-cd7216a117d1" name="Default Changelist" comment="Добавил кнопку &quot;закрыть&quot; и поправил координаты модального окна">
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +79,7 @@
       <workItem from="1635290987091" duration="9511000" />
       <workItem from="1635401345448" duration="14000" />
       <workItem from="1636506654533" duration="1352000" />
-      <workItem from="1636510986932" duration="8842000" />
+      <workItem from="1636510986932" duration="9141000" />
     </task>
     <task id="LOCAL-00001" summary="Подправил стили под safari">
       <created>1636513711696</created>
@@ -105,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636521063001</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавил кнопку &quot;закрыть&quot; и поправил координаты модального окна">
+      <created>1636524046248</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636524046248</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +129,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Подправил стили под safari" />
     <MESSAGE value="Убрал (надеюсь) подёргивания" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрал (надеюсь) подёргивания" />
+    <MESSAGE value="Добавил кнопку &quot;закрыть&quot; и поправил координаты модального окна" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил кнопку &quot;закрыть&quot; и поправил координаты модального окна" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1893" height="267" key="GridCell.Tab.0.bottom" timestamp="1635309035362">
