@@ -4,6 +4,9 @@ body {
     font-weight: 500;
     line-height:20px;
 }
+body * {
+    box-sizing: border-box;
+}
 .wrapper {
     height: 947px;
     width: 1300px;
@@ -49,7 +52,8 @@ body {
     border: 2px solid white;
     border-radius: 100%;
     font-weight: 500;
-    width: 19px;
+    width: 35px;
+    height: 35px;
     text-align: center;
     z-index: 2;
 }
@@ -229,7 +233,7 @@ body {
 }
 #rec-6 {
     height: 0;
-    width: 2.8rem;
+    width: 4.9rem;
     border-left: 34px solid transparent;
     border-right: 0 solid transparent;
     transform: rotate(43deg);
@@ -257,7 +261,7 @@ body {
 }
 #rec-7 {
     height: 0;
-    width: 2.5rem;
+    width: 4.2rem;
     border-left: 27px solid transparent;
     border-right: 0 solid transparent;
     transform: rotate(37deg);
@@ -395,7 +399,7 @@ body {
     top: 1.8rem;
     left: 16.5rem;
     height: 0;
-    width: 3.3rem;
+    width: 5.5rem;
     border-left: 34px solid transparent;
     border-right: 0 solid transparent;
     transform: rotate(40deg);
@@ -841,7 +845,7 @@ body {
 }
 #rec-31 {
     height: 0;
-    width: 2.5rem;
+    width: 4.7rem;
     border-left: 34px solid transparent;
     border-right: 0 solid transparent;
     transform: rotate(312deg);
@@ -868,7 +872,7 @@ body {
 }
 #rec-32 {
     height: 0;
-    width: 2.5rem;
+    width: 4.7rem;
     border-left: 34px solid transparent;
     border-right: 0 solid transparent;
     transform: rotate(312deg);
@@ -1112,6 +1116,7 @@ body {
 }
 .bottom {
     width: 45%;
+    max-height: unset;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1226,15 +1231,13 @@ body {
 }
 .markers {
     position: absolute;
-    width: 255px;
-    height: 255px;
     background: #F2F0EC;
     box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
     top: 45rem;
     left: 18rem;
     padding: 15px 25px;
     display: grid;
-    flex-wrap: wrap;
+    gap: 18px 27px;
     grid-template-columns: repeat(2, 1fr);
     z-index: 1;
 }
@@ -1252,8 +1255,12 @@ body {
     font-weight: bold;
 }
 @media(max-width: 460px) {
-    body *{
-        box-sizing: border-box;
+    .number {
+        width: 35px;
+        height: 35px;
+    }
+    #rec-6 .number {
+        top: -4rem;
     }
     .modal-stuff {
         max-width: 290px;
@@ -1272,6 +1279,7 @@ body {
     .bottom {
         width: 100%;
         margin-bottom: 15px;
+        max-height: unset;
     }
     .bottom-wrapper {
         flex-direction: column;
@@ -1280,7 +1288,7 @@ body {
     .modal {
         flex-direction: column;
         align-items: center;
-        max-width: 90%;
+        max-width: 320px;
     }
     .dialog-title {
         font-size: 20px;
